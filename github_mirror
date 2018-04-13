@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "game start"
+starttime=`date +'%Y-%m-%d %H:%M:%S'`
+#执行程序
+for ((i=1; i<=100; i ++))  
+do  
+    echo "this is the $i th push!">>test_batchpush.txt
+    git add .
+    git commit -m "test batch push"
+    git push origin master
+done  
+endtime=`date +'%Y-%m-%d %H:%M:%S'`
+start_seconds=$(date --date="$starttime" +%s);
+end_seconds=$(date --date="$endtime" +%s);
+echo "本次运行时间： "$((end_seconds-start_seconds))"s"
+echo "game over"
