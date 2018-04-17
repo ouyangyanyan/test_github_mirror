@@ -2,7 +2,7 @@
 echo "game start"
 start=$(date +%s) 
 #执行程序
-for ((i=1; i<=30; i ++))  
+for ((i=1; i<=10; i ++))  
 do  
     echo "this is the $i th push!">>test_batchpush.txt
     git add .
